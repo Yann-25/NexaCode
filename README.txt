@@ -15,3 +15,6 @@ perlu bukti ekstensi dan pengujian sebelum menyatakan dukungan operasional.
 Checkout dan demo di halaman ini bersifat simulasi, bukan transaksi resmi.
 
 Untuk versi satu file, buka NexaCode_Blue_Signal_ID_EN.html. Internet tetap diperlukan untuk Tailwind CDN dan font Google.
+
+
+LOGO BARU (2026-11-16): Logo navbar, About, footer, dan favicon diganti sesuai gambar pilihan pengguna. Aset ada di folder assets/. Versi satu file tersedia di arsip.

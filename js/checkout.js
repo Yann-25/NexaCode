@@ -36,10 +36,10 @@ const VIEWS={
 
  method:()=>`<h3 class='font-serif text-2xl text-white'>Pilih metode pembayaran</h3>
  <div class='mt-4 space-y-2'>${METHODS.map(([k,t,d])=>`<label class='flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer ${S.method===k?'border-[#8fd8ff] bg-[#8fd8ff]/5':'border-white/15'}'><input type='radio' name='m' value='${k}' ${S.method===k?'checked':''} class='accent-[#8fd8ff]'><span><b class='text-white text-sm block'>${t}</b><span class='text-xs text-gray-400'>${d}</span></span></label>`).join('')}</div>
- ${S.method==='va'?`<select id='fBank' class='${IN} mt-3'>${opts(['BCA','Mandiri','BNI','BRI'],S.bank)}</select>`:''}
- ${S.method==='ew'?`<select id='fWallet' class='${IN} mt-3'>${opts(['GoPay','OVO','ShopeePay','DANA'],S.wallet)}</select>`:''}
+ ${S.method==='va'?`<select id='fBank' class='${IN} ck-select mt-3' aria-label='Pilih bank'>${opts(['BCA','Mandiri','BNI','BRI'],S.bank)}</select>`:''}
+ ${S.method==='ew'?`<select id='fWallet' class='${IN} ck-select mt-3' aria-label='Pilih e-wallet'>${opts(['GoPay','OVO','ShopeePay','DANA'],S.wallet)}</select>`:''}
  ${S.method==='card'?`<div class='mt-3 space-y-2'><input id='fCard' inputmode='numeric' class='${IN}' placeholder='Nomor kartu 16 digit'><div class='grid grid-cols-2 gap-2'><input id='fExp' inputmode='numeric' class='${IN}' placeholder='MM/YY'><input id='fCvv' inputmode='numeric' maxlength='3' class='${IN}' placeholder='CVV'></div></div>`:''}
- <div class='mt-4 grid grid-cols-2 gap-3'><select id='fPeriod' class='${IN}'><option value='1'>Bulanan</option><option value='12' ${S.months===12?'selected':''}>Tahunan (hemat 20%)</option></select>
+ <div class='mt-4 grid grid-cols-2 gap-3'><select id='fPeriod' class='${IN} ck-select' aria-label='Periode langganan'><option value='1'>Bulanan</option><option value='12' ${S.months===12?'selected':''}>Tahunan (hemat 20%)</option></select>
  <div class='flex gap-2'><input id='fPromo' class='${IN}' placeholder='Kode promo' value='${esc(S.promo)}'><button data-act='promo' class='px-4 rounded-xl border border-white/20 text-sm text-white hover:bg-white/10'>Pakai</button></div></div>
  
  <div id='ckSum' class='mt-4 glass rounded-xl p-4 text-sm'>${sum()}</div>

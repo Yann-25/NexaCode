@@ -6,7 +6,7 @@ function show(id,first){
   let el=id&&document.getElementById(id);
   if(!el||!el.closest('.page')){id=HOME;el=document.getElementById(HOME)}
   const pg=el.closest('.page'),changed=pg!==cur;
-  if(changed){pages.forEach(p=>p.classList.toggle('on',p===pg));cur=pg;document.title='NexaCode AI – '+({beranda:'Asisten Pair-Programming di VS Code',demo:'Demo',fitur:'Fitur',tentang:'Tentang Kami',harga:'Harga',faq:'FAQ'}[pg.dataset.page]||'')}
+  if(changed){pages.forEach(p=>p.classList.toggle('on',p===pg));cur=pg;document.title='NexaCode AI – '+({beranda:'Asisten Pair-Programming di VS Code',demo:'Demo',fitur:'Fitur',tentang:'Tentang Kami',harga:'Harga',faq:'FAQ',kontak:'Kontak'}[pg.dataset.page]||'')}
   window.NexaI18n?.refresh();
   links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+id||(id!==pg.dataset.page&&a.getAttribute('href')==='#'+pg.dataset.page&&!links.some(b=>b.getAttribute('href')==='#'+id))));
   const top=el===pg.querySelector('section')||id===pg.dataset.page;

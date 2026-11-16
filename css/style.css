@@ -149,3 +149,39 @@
   header nav > a { gap: 5px; min-width: 0; }
   header nav > div:last-child { gap: 5px; }
 }
+
+/* ===== Contact Us ===== */
+.contact-page{isolation:isolate;}
+.contact-glow{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(55% 40% at 82% 19%,rgba(61,112,255,.16),transparent 80%),radial-gradient(50% 46% at 6% 70%,rgba(29,182,229,.09),transparent 75%)}
+.contact-info{transition:border-color .25s,transform .25s,box-shadow .25s}
+.contact-info:hover{transform:translateY(-3px);border-color:rgba(143,216,255,.45);box-shadow:0 18px 45px rgba(7,29,68,.22)}
+.contact-icon{display:grid;place-items:center;width:54px;height:54px;border-radius:18px;color:#8fd8ff;background:linear-gradient(145deg,rgba(79,140,255,.23),rgba(143,216,255,.07));border:1px solid rgba(143,216,255,.25)}
+.contact-icon svg{width:27px;height:27px}
+.contact-chip{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:99px;background:rgba(79,140,255,.12);border:1px solid rgba(143,216,255,.3);color:#d9edff;font-size:12px;transition:background .2s,border-color .2s}
+.contact-chip:hover{background:rgba(79,140,255,.25);border-color:rgba(143,216,255,.65)}
+.contact-form-card{background:linear-gradient(155deg,rgba(44,78,143,.2),rgba(8,18,38,.87));box-shadow:0 28px 80px rgba(1,5,16,.35)}
+.contact-form-decor{width:48px;height:48px;border-radius:16px;border:1px solid rgba(143,216,255,.26);background:rgba(79,140,255,.13);color:#8fd8ff;font-size:24px}
+.contact-label{display:block;margin-bottom:10px;color:#e8f3ff;font-size:13px;font-weight:600}
+.contact-input{display:block;width:100%;min-height:48px;padding:12px 15px;outline:none;background:rgba(4,13,30,.65);border:1px solid rgba(160,200,255,.22);border-radius:13px;color:#f5f9ff;font-size:14px;line-height:1.5;transition:border-color .2s,box-shadow .2s}
+.contact-input:focus-visible{border-color:#8fd8ff;box-shadow:0 0 0 3px rgba(143,216,255,.14)}
+.contact-input::placeholder{color:#8399b8}
+.contact-select{appearance:auto;color:#dfeaff;cursor:pointer}
+.contact-select option{background:#09162c;color:#fff}
+.contact-textarea{resize:vertical;min-height:150px}
+.contact-submit{background:linear-gradient(110deg,#8fd8ff,#4f8cff);box-shadow:0 8px 35px rgba(79,140,255,.25)}
+.contact-submit:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.contact-submit:focus-visible,.contact-copy:focus-visible{outline:2px solid #b3f0ff;outline-offset:3px}
+.contact-status{margin-top:12px;padding:12px 15px;border:1px solid rgba(143,216,255,.3);border-radius:12px;background:rgba(79,140,255,.1);color:#d8efff;font-size:13px;line-height:1.5}
+.contact-status.error{border-color:rgba(248,113,113,.5);background:rgba(248,113,113,.08);color:#fecaca}
+@media(max-width:550px){.contact-submit,.contact-copy{width:100%}}
+
+/* Native Windows/Chrome select menus: readable light list on dark checkout. */
+.ck-select { background-color:#11233f!important; color:#f3f7ff!important; color-scheme:light; appearance:auto; cursor:pointer; }
+.ck-select option, .ck-select optgroup { background-color:#ffffff!important; color:#10203b!important; font-weight:500; }
+.ck-select option:checked { background-color:#a6cfff!important; color:#06142a!important; }
+.ck-select:focus-visible { outline:2px solid #8fd8ff; outline-offset:2px; }
+.contact-select { color-scheme:light; background-color:#10223d; }
+.contact-select option { background:#fff!important; color:#14233b!important; }
+.ck-demo-banner{display:flex;gap:9px;padding:10px 14px;margin-bottom:16px;border:1px solid rgba(143,216,255,.25);border-radius:11px;background:rgba(79,140,255,.09);color:#bfd9ef;font-size:11px;line-height:1.5}
+.contact-status.good{border-color:rgba(70,211,180,.38);background:rgba(70,211,180,.09);color:#b6ffeb}
+.contact-setup-hint{font-size:12px;line-height:1.5;color:#d8efff;border:1px solid rgba(143,216,255,.22);background:rgba(79,140,255,.08);padding:12px 14px;border-radius:12px}

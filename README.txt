@@ -36,13 +36,16 @@ UPDATE: BAHASA DEMO ID/EN (16 NOVEMBER 2026)
 - Untuk mengaktifkan form email, konfigurasi js/contact-settings.js dengan inbox aktif dan konfirmasi email aktivasi FormSubmit.
 - Website adalah prototipe. Pembayaran dan demo coding hanya simulasi, bukan transaksi atau eksekusi AI sungguhan.
 
-UPDATE — PENGIRIMAN EMAIL DAN AKTIVASI
-- Email penerima diatur: ryaneryento25@gmail.com (pastikan kamu memang pemilik inbox).
-- Formulir mendeteksi halaman file:// dan menunjukkan petunjuk menggunakan hosting/server.
-- Formulir menampilkan status khusus jika FormSubmit meminta aktivasi, dan alasan error dari layanan.
-- Timeout 15 detik untuk mencegah status "Mengirim" menggantung selamanya.
-- Setelah layanan menerima kiriman dengan success=true, input formulir otomatis kosong tanpa reload seluruh halaman.
-- Jika status masih perlu aktivasi atau gagal, isian dipertahankan untuk percobaan ulang.
-- Berkas aktivasi-kontak.html: kirim tes aktivasi manual menggunakan POST dari URL HTTP/HTTPS.
-- Link aktivasi hanya dapat diklik oleh pemilik Gmail. Tidak dapat dilakukan otomatis via JavaScript.
-- Jangan menguji pengiriman langsung lewat file://; situs harus di-host atau memakai server lokal.
+
+UPDATE — DEPLOY BARENG NEXA (TANYA JAWAB)
+======================================
+Pada halaman Demo kini ada panel "Deploy Bareng Nexa" dengan 8 contoh pertanyaan
+dan jawaban edukatif berbentuk langkah-langkah. Pengunjung bisa memilih chip
+atau mengetik pertanyaan sendiri, Enter atau tombol Kirim.
+Materi: Deploy React/Vite ke Vercel, Build React/Vite, Error Deploy, GitHub,
+CI/CD, Custom Domain, Unit Testing, dan Rollback.
+Tersedia dua bahasa (ID / EN); tombol bahasa langsung mengganti jawaban aktif.
+PENTING: FAQ interaktif ini simulasi berbasis jawaban terkurasi, BUKAN AI chatbot
+yang memanggil backend, dan tidak benar-benar menjalankan perintah git/deploy.
+
+Buka index.html atau upload folder website beserta seluruh aset untuk memakai.

@@ -1,11 +1,10 @@
 /**
- * NexaCode AI — Pengaturan FormSubmit.
- * receiverEmail adalah alamat email penerima, BUKAN password/login.
- * Setelah mengaktifkan form, kamu bisa mengganti formEndpointId dengan
- * token acak dari email FormSubmit (jika tersedia), untuk menyembunyikan alamat.
- * FormSubmit tidak mengirim jika website dibuka langsung via file://.
+ * PENGATURAN EMAIL NEXACODE — ubah satu baris receiverEmail di bawah.
+ * Masukkan alamat inbox AKTIF milikmu, contohnya alamat Gmail yang kamu punya.
+ * Jangan memasukkan password, API key, token, atau rahasia lain ke file publik ini.
+ * FormSubmit akan mengirim email aktivasi pada percobaan pertama; konfirmasi di inbox.
+ * Jika punya domain nexacode.ai dan mailbox support@nexacode.ai aktif, pakai alamat itu.
  */
 window.NexaContactSettings = Object.freeze({
-  receiverEmail: 'ryaneryento25@gmail.com',
-  formEndpointId: '' // opsional: token endpoint yang diperoleh setelah aktivasi FormSubmit
+  receiverEmail: '' // Contoh: 'alamatgmailaktifkamu@gmail.com'
 });

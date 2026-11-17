@@ -178,17 +178,40 @@
     </div>
   </div>
 </section>
-<!-- ===== Tanya Nexa (interaktif) ===== -->
-<section class='py-24'>
-  <div class='max-w-3xl mx-auto px-5 text-center'>
-    <p class='eyebrow'>Ngobrol dengan Nexa</p>
-    <h2 class='font-serif text-3xl sm:text-5xl font-bold text-white mt-3'>Ceritakan keluhan ngodingmu.</h2>
-    <p class='mt-4 text-gray-400'>Ketik satu kata: error, deadline, begadang, skripsi, atau bingung.</p>
-    <div class='mt-8 flex gap-2'>
-      <input id='nxIn' class='flex-1 bg-white/5 border border-white/15 rounded-full px-5 py-3 text-white focus:outline-none focus:border-[#8fd8ff]' placeholder='Misalnya: aku lagi error...' autocomplete='off'>
-      <button id='nxGo' class='px-6 py-3 rounded-full bg-gradient-to-r from-[#4f8cff] to-[#8fd8ff] text-black font-semibold'>Kirim</button>
+<!-- ===== Deploy Bareng Nexa: Interactive Q&A demo ===== -->
+<section class="py-20" id="deploy-nexa" aria-labelledby="nxHeading">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="nx-deploy-panel relative overflow-hidden rounded-[30px] border border-[#679bef]/40 bg-[#06152d]/90 p-6 sm:p-10 md:p-12 shadow-[0_0_60px_rgba(48,121,255,.14)]">
+      <div class="nx-deploy-glow" aria-hidden="true"></div>
+      <div class="relative z-10">
+        <p class="eyebrow text-center" id="nxEyebrow">DEPLOY BARENG NEXA</p>
+        <h2 id="nxHeading" class="font-serif text-3xl sm:text-5xl font-bold text-white mt-3 text-center">Dari editor sampai online, satu alat.</h2>
+        <p id="nxLead" class="mt-4 text-gray-300 max-w-2xl mx-auto text-center">Tanya seputar sync, build, deploy, dan rilis. Pilih contoh pertanyaan atau ketik sendiri.</p>
+        <div class="mt-8" aria-label="Contoh pertanyaan" id="nxExamples">
+          <p class="text-xs uppercase tracking-[.19em] text-[#9ccaff] mb-3" id="nxExamplesLabel">COBA PERTANYAAN INI</p>
+          <div class="flex flex-wrap gap-2">
+            <button class="nx-chip" type="button" data-nx-topic="deploy">Deploy ke Vercel</button>
+            <button class="nx-chip" type="button" data-nx-topic="build">Build React/Vite</button>
+            <button class="nx-chip" type="button" data-nx-topic="deploy-error">Error saat deploy</button>
+            <button class="nx-chip" type="button" data-nx-topic="git">GitHub sync</button>
+            <button class="nx-chip" type="button" data-nx-topic="cicd">CI/CD otomatis</button>
+            <button class="nx-chip" type="button" data-nx-topic="domain">Domain sendiri</button>
+            <button class="nx-chip" type="button" data-nx-topic="testing">Unit test</button>
+            <button class="nx-chip" type="button" data-nx-topic="rollback">Rollback versi</button>
+          </div>
+        </div>
+        <form id="nxForm" class="mt-7 flex flex-col sm:flex-row gap-3" novalidate>
+          <label for="nxIn" class="sr-only">Pertanyaan untuk Nexa</label>
+          <input autocomplete="off" maxlength="400" class="min-w-0 flex-1 bg-white/[.07] border border-white/20 rounded-2xl px-5 py-3.5 text-white placeholder:text-gray-400 focus:outline-none focus:border-[#8fd8ff] focus:ring-2 focus:ring-[#8fd8ff]/15" id="nxIn" placeholder="Misalnya: deploy project React aku ke Vercel gimana?" aria-describedby="nxDisclaimer" required/>
+          <button class="nx-send px-7 py-3.5 rounded-2xl bg-gradient-to-r from-[#4f8cff] to-[#8fd8ff] text-[#06152d] font-bold transition hover:brightness-110" id="nxGo" type="submit">Kirim ↗</button>
+        </form>
+        <div class="mt-5 rounded-2xl border border-white/15 bg-white/[.065] p-5 sm:p-6 min-h-[140px]" id="nxOut" role="status" aria-live="polite" aria-atomic="true">
+          <div class="text-xs text-[#86D8FF] font-semibold tracking-wide mb-2">Nexa <span id="nxAnswerType" class="ml-2 text-gray-400 font-normal">· Panduan Interaktif</span></div>
+          <div id="nxTxt" class="text-gray-100 leading-relaxed">Siap! Pilih pertanyaan di atas atau tulis perintahmu. Aku akan menampilkan panduan sesuai topiknya.</div>
+        </div>
+        <p id="nxDisclaimer" class="mt-4 text-xs text-gray-400 leading-relaxed">Ini simulasi panduan berbasis contoh pertanyaan. Nexa tidak menjalankan git, build, atau deployment sungguhan dari halaman ini. Jangan masukkan password atau token.</p>
+      </div>
     </div>
-    <div id='nxOut' class='mt-8 glass rounded-2xl p-6 text-left min-h-[110px]'><div class='text-xs text-[#8fd8ff] mb-2'>Nexa</div><p id='nxTxt' class='text-gray-200 leading-relaxed'>Halo. Aku Nexa. Duduk dulu, tarik napas. Kita bereskan pelan-pelan.</p></div>
   </div>
 </section>
 <script src="js/tanya-nexa.js"></script>

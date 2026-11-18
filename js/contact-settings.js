@@ -6,5 +6,5 @@
  * Jika punya domain nexacode.ai dan mailbox support@nexacode.ai aktif, pakai alamat itu.
  */
 window.NexaContactSettings = Object.freeze({
-  receiverEmail: '' // Contoh: 'alamatgmailaktifkamu@gmail.com'
+  receiverEmail: 'ryaneryento25@gmail.com' // Contoh: 'alamatgmailaktifkamu@gmail.com'
 });
